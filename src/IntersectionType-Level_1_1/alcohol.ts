@@ -2,14 +2,14 @@
 
 //Alcohol hat die Eigenschaften: name, percentage und type
 
-type Alcohol = {
+export type Alcohol = {
 	name: string;
 	percentage: number;
 	type: string;
 };
 
 // Mixer hat die Eigenschaften: name, type und carbonated
-type Mixer = {
+export type Mixer = {
 	name: string;
 	type: string;
 	carbonated: boolean;
@@ -17,11 +17,11 @@ type Mixer = {
 
 //Lege anschließend einen Intersection-Typ namens Cocktail an, der sowohl die Eigenschaften von Alcohol als auch von Mixer enthält.
 
-type Coctail = Alcohol & Mixer;
+export type Cocktail = Alcohol & Mixer;
 
 //Erstelle ein Objekt vom Typ Cocktail und weise ihm entsprechende Eigenschaften zu.
 
-const ginTonic: Coctail = {
+const ginTonic: Cocktail = {
 	name: "ginTonic",
 	percentage: 40,
 	type: "hochprozentiges",
